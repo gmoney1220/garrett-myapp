@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-6 no-padding>
+        <ion-item>
+          <ion-label>Age</ion-label>
+          <ion-select [(ngModel)]="age">
+            <ion-option>Under 18</ion-option>
+            <ion-option>18-24</ion-option>
+            <ion-option>25-56</ion-option>
+            <ion-option>57+</ion-option>
+          </ion-select>
+        </ion-item>
+        <button ion-button full (click)="showAge()">How old am I?</button>
+      </ion-col>
+      <ion-col col-12 col-sm-6 text-center>
+        <p class="age-display">
+          Your age: <span class="age">{{age}}</span>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
